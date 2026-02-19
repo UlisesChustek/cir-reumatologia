@@ -11,7 +11,9 @@
     <link href="img/favicon.ico" rel="icon">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -54,15 +56,9 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Sobre nosotros</a>
-                        <a href="service.html" class="nav-item nav-link">Servicios</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Institucional</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="team.html" class="dropdown-item">El equipo</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonios</a>
-                            </div>
-                        </div>
+                        <a href="index.html#about" class="nav-item nav-link">Sobre nosotros</a>
+                        <a href="index.html#services" class="nav-item nav-link">Servicios</a>
+                        <a href="index.html#team" class="nav-item nav-link">El equipo</a>
                         <a href="contact.html" class="nav-item nav-link active">Contacto</a>
                     </div>
                 </div>
@@ -75,33 +71,55 @@
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">¿Dudas?</h5>
                 <h1 class="display-4">Información de Contacto</h1>
             </div>
-            <div class="row g-5 mb-5">
-                <div class="col-lg-4">
-                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 200px;">
-                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
+                        style="height: 200px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4"
+                            style="width: 100px; height: 70px; transform: rotate(-15deg);">
                             <i class="fa fa-2x fa-location-arrow text-white" style="transform: rotate(15deg);"></i>
                         </div>
                         <h6 class="mb-0">
-                            <a href="https://www.google.com/maps/search/Santiago+del+Estero+118,+San+Miguel+de+Tucuman" target="_blank" class="text-dark text-decoration-none">
+                            <a href="https://www.google.com/maps/search/Santiago+del+Estero+118,+San+Miguel+de+Tucuman"
+                                target="_blank" class="text-dark text-decoration-none">
                                 Santiago del Estero 118, Tucumán
                             </a>
                         </h6>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 200px;">
-                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
+                        style="height: 200px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4"
+                            style="width: 100px; height: 70px; transform: rotate(-15deg);">
                             <i class="fa fa-2x fa-phone text-white" style="transform: rotate(15deg);"></i>
                         </div>
-                        <h6 class="mb-0"><a href="tel:+5493812543377" class="text-dark text-decoration-none">+54 9 381 254 3377</a></h6>
+                        <h6 class="mb-1"><a href="tel:+5493812543377" class="text-dark text-decoration-none">+54 9 381
+                                254 3377</a></h6>
+                        <small class="text-muted">Llamadas</small>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 200px;">
-                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
+                        style="height: 200px;">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle mb-4"
+                            style="width: 100px; height: 70px; transform: rotate(-15deg); background-color: #25D366;">
+                            <i class="fab fa-2x fa-whatsapp text-white" style="transform: rotate(15deg);"></i>
+                        </div>
+                        <h6 class="mb-1"><a href="https://wa.me/5493812072312" target="_blank"
+                                class="text-dark text-decoration-none">+54 9 381 207 2312</a></h6>
+                        <small style="color: #25D366; font-weight: 600;">WhatsApp</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center"
+                        style="height: 200px;">
+                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4"
+                            style="width: 100px; height: 70px; transform: rotate(-15deg);">
                             <i class="fa fa-2x fa-envelope-open text-white" style="transform: rotate(15deg);"></i>
                         </div>
-                        <h6 class="mb-0"><a href="mailto:reumatologiacir@gmail.com" class="text-dark text-decoration-none">reumatologiacir@gmail.com</a></h6>
+                        <h6 class="mb-0"><a href="mailto:reumatologiacir@gmail.com"
+                                class="text-dark text-decoration-none">reumatologiacir@gmail.com</a></h6>
                     </div>
                 </div>
             </div>
@@ -121,11 +139,13 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-6 col-md-9">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Contactanos</h4>
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                        Contactanos</h4>
                     <p class="mb-4">Nos puedes encontrar en:</p>
                     <p class="mb-2">
                         <i class="fa fa-map-marker-alt text-primary me-3"></i>
-                        <a href="https://www.google.com/maps/search/Santiago+del+Estero+118,+San+Miguel+de+Tucuman" target="_blank" class="text-light">118 Santiago del Estero 5to piso, Tucumán</a>
+                        <a href="https://www.google.com/maps/search/Santiago+del+Estero+118,+San+Miguel+de+Tucuman"
+                            target="_blank" class="text-light">118 Santiago del Estero 5to piso, Tucumán</a>
                     </p>
                     <p class="mb-2">
                         <i class="fa fa-envelope text-primary me-3"></i>
@@ -141,12 +161,16 @@
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-9">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Enlaces rapidos</h4>
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                        Enlaces rapidos</h4>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Inicio</a>
-                        <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>Sobre nosotros</a>
-                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Servicios</a>
-                        <a class="text-light mb-2" href="team.html"><i class="fa fa-angle-right me-2"></i>Nuestro equipo</a>
+                        <a class="text-light mb-2" href="index.html#about"><i class="fa fa-angle-right me-2"></i>Sobre
+                            nosotros</a>
+                        <a class="text-light mb-2" href="index.html#services"><i
+                                class="fa fa-angle-right me-2"></i>Servicios</a>
+                        <a class="text-light mb-2" href="index.html#team"><i class="fa fa-angle-right me-2"></i>Nuestro
+                            equipo</a>
                         <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contacto</a>
                     </div>
                 </div>
@@ -157,7 +181,8 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">© <a class="text-primary" href="#">C.I.R SRL</a>. Todos los derechos reservados.</p>
+                    <p class="mb-md-0">© <a class="text-primary" href="#">C.I.R SRL</a>. Todos los derechos reservados.
+                    </p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>

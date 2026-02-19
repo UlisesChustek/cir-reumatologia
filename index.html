@@ -11,7 +11,9 @@
     <link href="img/favicon.ico" rel="icon">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -22,25 +24,35 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        [id] {
+            scroll-margin-top: 80px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container-fluid py-2 border-bottom d-none d-lg-block">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-decoration-none text-body pe-3" href="tel:+5493812543377">
-                        <i class="bi bi-telephone me-2"></i>+54 9 381 254 3377
-                    </a>
-                    <span class="text-body">|</span>
-                    <a class="text-decoration-none text-body px-3" href="mailto:reumatologiacir@gmail.com">
-                        <i class="bi bi-envelope me-2"></i>reumatologiacir@gmail.com
-                    </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-decoration-none text-body pe-3" href="tel:+5493812543377">
+                            <i class="bi bi-telephone me-2"></i>+54 9 381 254 3377
+                        </a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href="mailto:reumatologiacir@gmail.com">
+                            <i class="bi bi-envelope me-2"></i>reumatologiacir@gmail.com
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="container-fluid sticky-top bg-white shadow-sm">
         <div class="container">
@@ -53,16 +65,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Sobre nosotros</a>
-                        <a href="service.html" class="nav-item nav-link">Servicios</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Institucional</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="team.html" class="dropdown-item">El equipo</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonios</a>
-                            </div>
-                        </div>
+                        <a href="#" class="nav-item nav-link active">Inicio</a>
+                        <a href="#about" class="nav-item nav-link">Sobre nosotros</a>
+                        <a href="#services" class="nav-item nav-link">Servicios</a>
+                        <a href="#team" class="nav-item nav-link">El equipo</a>
                         <a href="contact.html" class="nav-item nav-link">Contacto</a>
                     </div>
                 </div>
@@ -78,24 +84,31 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5">
+    <div id="about" class="container-fluid py-5">
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg"
+                            style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="mb-4">
-                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Sobre nosotros</h5>
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Sobre nosotros
+                        </h5>
                         <h1 class="display-4">El mejor centro reumatológico</h1>
                     </div>
-                    <p>El Centro Integral de Reumatología, ubicado en la ciudad de San Miguel de Tucumán, es un referente de prestigio en la provincia y en la región del Noroeste Argentino.
+                    <p>El Centro Integral de Reumatología cuenta con 35 años de trayectoria en San Miguel de Tucumán,
+                        con reconocido prestigio en la región.
                         <br><br>
-                        Fundado con el objetivo de abordar las enfermedades reumáticas desde un enfoque interdisciplinario, nuestro equipo trabaja para garantizar que cada paciente reciba un diagnóstico preciso y el mejor resultado terapéutico. Para lograrlo, contamos con un staff médico especializado en las distintas áreas de la reumatología, apoyado por tecnología avanzada y un trato humano.
+                        Brindamos un abordaje interdisciplinario del paciente reumático, con un equipo médico
+                        especializado orientado a lograr los mejores resultados terapéuticos.
                         <br><br>
-                        34 años de experiencia respaldan nuestro compromiso con la salud y la calidad de vida de quienes confían en nosotros.
+                        Nuestro staff de reumatólogos está integrado por profesionales certificados, miembros de la
+                        Sociedad de Reumatología Tucumana y de la Sociedad Argentina de Reumatología (SAR). Contamos
+                        además con un equipo interdisciplinario de distintas especialidades para una atención integral
+                        del paciente reumático.
                     </p>
                     <div class="row g-3 pt-3">
                         <div class="col-sm-3 col-6">
@@ -119,7 +132,8 @@
                         <div class="col-sm-3 col-6">
                             <div class="bg-light text-center rounded-circle py-4">
                                 <i class="fa fa-3x fa-flask text-primary mb-3"></i>
-                                <h6 class="mb-0">Investigación<small class="d-block text-primary">Laboratorios</small></h6>
+                                <h6 class="mb-0">Investigación<small class="d-block text-primary">Laboratorios</small>
+                                </h6>
                             </div>
                         </div>
                     </div>
@@ -127,80 +141,67 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5">
+    <div id="services" class="container-fluid py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Servicios</h5>
                 <h1 class="display-4">Servicios médicos</h1>
             </div>
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-6 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon mb-4">
                             <i class="fa fa-2x fa-user-md text-white"></i>
                         </div>
                         <h4 class="mb-3">Consultas Médicas</h4>
-                        <p class="m-0">Elija al especialista que necesita entre nuestro equipo de profesionales. Reserve su turno con el médico que mejor se adapte a sus necesidades de salud.</p>
+                        <p class="m-0">Elija al especialista que necesita entre nuestro equipo de profesionales. Reserve
+                            su turno con el médico que mejor se adapte a sus necesidades de salud.</p>
                         <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="col-lg-6 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon mb-4">
                             <i class="fa fa-2x fa-bone text-white"></i>
                         </div>
-                        <h4 class="mb-3">Densitometrías</h4>
-                        <p class="m-0">Evaluación precisa de la densidad ósea para prevenir y diagnosticar osteoporosis. Recomendado especialmente para adultos mayores de 60 años.</p>
+                        <h4 class="mb-3">Densitometría Ósea</h4>
+                        <p class="m-0">Atendemos de lunes a viernes, de 08:00 a 19:00 hs. El servicio es rápido,
+                            completo y seguro. Puede asistir con o sin turno previo y los informes se entregan al
+                            instante.</p>
+                        <small class="text-muted fst-italic mt-2">Cuidar sus huesos hoy es prevenir fracturas
+                            mañana...</small>
                         <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="col-lg-6 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon mb-4">
                             <i class="fa fa-2x fa-image text-white"></i>
                         </div>
                         <h4 class="mb-3">Ecografía partes blandas</h4>
-                        <p class="m-0">Diagnóstico por imágenes de tejidos blandos, músculos y articulaciones. Tecnología de ultrasonido para evaluar lesiones y condiciones inflamatorias.</p>
+                        <p class="m-0">Diagnóstico por imágenes de tejidos blandos, músculos y articulaciones.
+                            Tecnología de ultrasonido para evaluar lesiones y condiciones inflamatorias.</p>
                         <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="col-lg-6 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon mb-4">
                             <i class="fa fa-2x fa-search text-white"></i>
                         </div>
                         <h4 class="mb-3">Capilaroscopia</h4>
-                        <p class="m-0">Estudio especializado para evaluar la microcirculación en capilares. Diagnóstico preciso de enfermedades reumatológicas y vasculares mediante observación directa.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon mb-4">
-                            <i class="fa fa-2x fa-pills text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Tratamientos Biológicos</h4>
-                        <p class="m-0">Aplicación y monitoreo de terapias biológicas avanzadas para el control de patologías autoinmunes.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon mb-4">
-                            <i class="fa fa-2x fa-hand-holding-medical text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Rehabilitación</h4>
-                        <p class="m-0">Acompañamiento terapéutico integral para mejorar la calidad de vida y movilidad del paciente.</p>
+                        <p class="m-0">Estudio especializado para evaluar la microcirculación en capilares. Diagnóstico
+                            preciso de enfermedades reumatológicas y vasculares mediante observación directa.</p>
                         <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -209,7 +210,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5">
+    <div id="team" class="container-fluid py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 450px;">
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Nuestros médicos</h5>
@@ -225,10 +226,8 @@
                             <div class="mt-auto p-4">
                                 <h3>Dr. Nombre Apellido</h3>
                                 <h6 class="fw-normal fst-italic text-primary mb-4">Reumatología</h6>
-                                <p class="m-0">Especialista con amplia trayectoria en el diagnóstico y tratamiento de enfermedades reumáticas.</p>
-                            </div>
-                            <div class="d-flex mt-auto border-top p-4">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <p class="m-0">Especialista con amplia trayectoria en el diagnóstico y tratamiento de
+                                    enfermedades reumáticas.</p>
                             </div>
                         </div>
                     </div>
@@ -242,10 +241,8 @@
                             <div class="mt-auto p-4">
                                 <h3>Dra. Nombre Apellido</h3>
                                 <h6 class="fw-normal fst-italic text-primary mb-4">Reumatología Infantil</h6>
-                                <p class="m-0">Atención especializada y humana para el cuidado de la salud de los más jóvenes.</p>
-                            </div>
-                            <div class="d-flex mt-auto border-top p-4">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <p class="m-0">Atención especializada y humana para el cuidado de la salud de los más
+                                    jóvenes.</p>
                             </div>
                         </div>
                     </div>
@@ -259,10 +256,8 @@
                             <div class="mt-auto p-4">
                                 <h3>Dr. Nombre Apellido</h3>
                                 <h6 class="fw-normal fst-italic text-primary mb-4">Clínica Médica</h6>
-                                <p class="m-0">Enfoque integral en la salud del paciente y seguimiento clínico personalizado.</p>
-                            </div>
-                            <div class="d-flex mt-auto border-top p-4">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <p class="m-0">Enfoque integral en la salud del paciente y seguimiento clínico
+                                    personalizado.</p>
                             </div>
                         </div>
                     </div>
@@ -270,103 +265,76 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5">
+
+    <div id="obras-sociales" class="container-fluid py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Testimonios</h5>
-                <h1 class="display-4">Lo que dicen nuestros pacientes</h1>
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Obras Sociales</h5>
+                <h1 class="display-4">Recibimos</h1>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-1.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4 fw-normal">"Excelente atención por parte de todo el equipo. Me sentí muy contenido y el diagnóstico fue preciso desde el primer momento."</p>
-                            <hr class="w-25 mx-auto">
-                            <h3>Paciente Satisfecho</h3>
-                            <h6 class="fw-normal text-primary mb-3">Tucumán</h6>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-2.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4 fw-normal">"La calidad humana de los doctores es destacable. Muy agradecida por el tratamiento recibido."</p>
-                            <hr class="w-25 mx-auto">
-                            <h3>Paciente Satisfecho</h3>
-                            <h6 class="fw-normal text-primary mb-3">Tucumán</h6>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-3.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4 fw-normal">"Instalaciones impecables y turnos rápidos. Recomiendo totalmente el centro."</p>
-                            <hr class="w-25 mx-auto">
-                            <h3>Paciente Satisfecho</h3>
-                            <h6 class="fw-normal text-primary mb-3">Tucumán</h6>
-                        </div>
+                <div class="col-lg-10">
+                    <div class="bg-light rounded p-4 p-lg-5 text-center">
+                        <img class="img-fluid" src="img/obras-sociales.png"
+                            alt="Obras Sociales - Subsidio de Salud, PAMI, Ricardo C. Mora, Boreal, Swiss Medical, OSDOP, OSPRERA">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="container-fluid bg-dark text-light mt-5 py-5">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-6 col-md-9">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Contactanos</h4>
-                <p class="mb-4">Nos puedes encontrar en:</p>
-                <p class="mb-2">
-                    <i class="fa fa-map-marker-alt text-primary me-3"></i>
-                    <a href="https://www.google.com/maps/search/Santiago+del+Estero+118,+San+Miguel+de+Tucuman" target="_blank" class="text-light">118 Santiago del Estero 5to piso, Tucumán</a>
-                </p>
-                <p class="mb-2">
-                    <i class="fa fa-envelope text-primary me-3"></i>
-                    <a href="mailto:reumatologiacir@gmail.com" class="text-light">reumatologiacir@gmail.com</a>
-                </p>
-                <p class="mb-2">
-                    <i class="fa fa-phone-alt text-primary me-3"></i>
-                    <a href="tel:+5493812543377" class="text-light">+54 9 381 254 3377</a>
-                </p>
-                <p class="mb-0">
-                    <i class="fab fa-whatsapp text-primary me-3"></i>
-                    <a href="https://wa.me/5493812072312" target="_blank" class="text-light">+54 9 381 2072312</a>
-                </p>
-            </div>
-            <div class="col-lg-6 col-md-9">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Enlaces rapidos</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Inicio</a>
-                    <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>Sobre nosotros</a>
-                    <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Servicios</a>
-                    <a class="text-light mb-2" href="team.html"><i class="fa fa-angle-right me-2"></i>Nuestro equipo</a>
-                    <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contacto</a>
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 col-md-9">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                        Contactanos</h4>
+                    <p class="mb-4">Nos puedes encontrar en:</p>
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt text-primary me-3"></i>
+                        <a href="https://www.google.com/maps/search/Santiago+del+Estero+118,+San+Miguel+de+Tucuman"
+                            target="_blank" class="text-light">118 Santiago del Estero 5to piso, Tucumán</a>
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-envelope text-primary me-3"></i>
+                        <a href="mailto:reumatologiacir@gmail.com" class="text-light">reumatologiacir@gmail.com</a>
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt text-primary me-3"></i>
+                        <a href="tel:+5493812543377" class="text-light">+54 9 381 254 3377</a>
+                    </p>
+                    <p class="mb-0">
+                        <i class="fab fa-whatsapp text-primary me-3"></i>
+                        <a href="https://wa.me/5493812072312" target="_blank" class="text-light">+54 9 381 2072312</a>
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-9">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                        Enlaces rapidos</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Inicio</a>
+                        <a class="text-light mb-2" href="#about"><i class="fa fa-angle-right me-2"></i>Sobre
+                            nosotros</a>
+                        <a class="text-light mb-2" href="#services"><i class="fa fa-angle-right me-2"></i>Servicios</a>
+                        <a class="text-light mb-2" href="#team"><i class="fa fa-angle-right me-2"></i>Nuestro equipo</a>
+                        <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contacto</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
     <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="mb-md-0">© <a class="text-primary" href="#">C.I.R SRL</a>. Todos los derechos reservados.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">© <a class="text-primary" href="#">C.I.R SRL</a>. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
@@ -381,6 +349,46 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <script src="js/main.js"></script>
+
+    <script>
+        (function () {
+            const sections = document.querySelectorAll('[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
+
+            function setActiveLink(id) {
+                navLinks.forEach(function (link) {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + id || (id === '' && link.getAttribute('href') === '#')) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            var currentSection = '';
+
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        currentSection = entry.target.id;
+                        setActiveLink(currentSection);
+                    }
+                });
+            }, {
+                rootMargin: '-100px 0px -60% 0px',
+                threshold: 0
+            });
+
+            sections.forEach(function (section) {
+                observer.observe(section);
+            });
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY < 200) {
+                    setActiveLink('');
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>
