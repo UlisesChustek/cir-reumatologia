@@ -5,27 +5,36 @@
     <meta charset="utf-8">
     <title>C.I.R. S.R.L. - Centro Integral de Reumatología</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Centro Integral de Reumatología San Miguel de Tucumán" name="keywords">
+    <meta content="Centro Integral de Reumatología - 35 años de trayectoria en Tucumán" name="description">
 
     <link href="img/favicon.ico" rel="icon">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/style.css" rel="stylesheet">
-
     <style>
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0a58ca;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -33,361 +42,967 @@
         [id] {
             scroll-margin-top: 80px;
         }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--bg-light);
+            padding: 12px 0;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .top-bar a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .top-bar a:hover {
+            color: var(--primary);
+        }
+
+        /* Navigation - Always visible on desktop */
+        .navbar {
+            background: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .brand i {
+            color: var(--primary);
+            font-size: 28px;
+        }
+
+        .brand span {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 14px;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--primary);
+            background: var(--bg-light);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 100px 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: #fff;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: heroIn 0.8s ease forwards;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,0.85);
+            font-size: 18px;
+            max-width: 520px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: heroIn 0.8s ease 0.15s forwards;
+        }
+
+        @keyframes heroIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+        }
+
+        /* About */
+        .about-section {
+            background: var(--bg-light);
+            padding: 100px 0;
+        }
+
+        .about-hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .about-hero .section-title {
+            margin-top: 12px;
+        }
+
+        .about-split {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+        }
+
+        @media (max-width: 768px) {
+            .about-split {
+                grid-template-columns: 1fr;
+                gap: 36px;
+                text-align: center;
+            }
+        }
+
+        .about-visual {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-img-frame {
+            background: transparent;
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        .about-img-frame img {
+            width: 200px;
+            height: auto;
+            display: block;
+        }
+
+        .about-details {
+            padding-right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .about-details {
+                padding-right: 0;
+            }
+        }
+
+        .about-details p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.85;
+            font-size: 16px;
+        }
+
+        .about-details p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-details strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 36px;
+        }
+
+        @media (max-width: 600px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .stat-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 24px 16px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(13, 110, 253, 0.1);
+        }
+
+        .stat-card i {
+            color: var(--primary);
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .stat-card h6 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .stat-card small {
+            font-size: 11px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Services */
+        .services-section {
+            background: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 36px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 16px 40px rgba(13, 110, 253, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 14px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: gap 0.25s;
+        }
+
+        .btn-contact:hover {
+            gap: 16px;
+        }
+
+        /* Team Carousel - Custom Design */
+        .team-section {
+            background: #fff;
+            padding: 100px 0;
+        }
+
+        .team-carousel-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-carousel-track {
+            display: flex;
+            gap: 24px;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            width: 100%;
+        }
+
+        .team-carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .team-card {
+            flex: 0 0 calc(33.333% - 16px);
+            min-width: calc(33.333% - 16px);
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            border: 1px solid var(--border);
+            scroll-snap-align: start;
+        }
+
+        @media (max-width: 992px) {
+            .team-card {
+                flex: 0 0 calc(50% - 12px);
+                min-width: calc(50% - 12px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .team-card {
+                flex: 0 0 100%;
+                min-width: 100%;
+            }
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(13, 110, 253, 0.12);
+            border-color: var(--primary);
+        }
+
+        .team-img-wrap {
+            position: relative;
+            overflow: hidden;
+            height: 240px;
+        }
+
+        .team-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-card:hover .team-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .team-info h3 {
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .team-role {
+            display: inline-block;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .team-desc {
+            color: var(--text-light);
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .team-arrow {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: #fff;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.25s;
+            color: var(--primary);
+            font-size: 16px;
+            z-index: 10;
+        }
+
+        .team-arrow:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .team-arrow {
+                display: none;
+            }
+        }
+
+        /* Obras Sociales */
+        .obras-section {
+            background: var(--bg-light);
+        }
+
+        .obras-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 48px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .obras-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 80px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            padding-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+
+        .footer h4 {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 28px;
+            font-family: 'Manrope', sans-serif;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 14px;
+            display: inline-block;
+        }
+
+        .footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+            transition: all 0.2s;
+        }
+
+        .footer a:hover {
+            color: #fff;
+            transform: translateX(6px);
+        }
+
+        .footer a i:first-child {
+            color: var(--primary);
+            width: 18px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+
+        .footer-bottom a {
+            color: var(--primary);
+            margin: 0;
+        }
+
+        /* Back to Top */
+        .back-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 1000;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+        }
+
+        .back-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-4px);
+        }
+
+        /* Mobile menu button hidden on desktop */
+        .mobile-toggle {
+            display: none;
+        }
+
+        @media (max-width: 900px) {
+            .nav-menu {
+                display: none;
+            }
+            .mobile-toggle {
+                display: flex;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: var(--text);
+                cursor: pointer;
+            }
+            .nav-menu.mobile-open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 20px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+    <div class="top-bar">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-decoration-none text-body pe-3" href="tel:+5493812543377">
-                            <i class="bi bi-telephone me-2"></i>+54 9 381 254 3377
-                        </a>
-                        <span class="text-body">|</span>
-                        <a class="text-decoration-none text-body px-3" href="mailto:reumatologiacir@gmail.com">
-                            <i class="bi bi-envelope me-2"></i>reumatologiacir@gmail.com
-                        </a>
-                    </div>
-                </div>
+            <div style="display: flex; gap: 32px;">
+                <a href="tel:+5493812543377"><i class="bi bi-telephone me-2"></i>+54 9 381 254 3377</a>
+                <a href="mailto:reumatologiacir@gmail.com"><i class="bi bi-envelope me-2"></i>reumatologiacir@gmail.com</a>
             </div>
         </div>
     </div>
-    <div class="container-fluid sticky-top bg-white shadow-sm">
+
+    <header class="navbar">
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>C.I.R SRL</h1>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+            <a href="index.html" class="brand">
+                <img src="img/Screenshot from 2026-02-20 12-00-37.png" alt="C.I.R SRL" style="height: 36px; margin-right: 8px;">
+                <span>C.I.R SRL</span>
+            </a>
+            
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('mobile-open')">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#team">Equipo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Centro Integral de Reumatología</h1>
+            <p>35 años de trayectoria cuidando la salud de Tucumán. Profesionales certificados y atención interdisciplinaria.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-hero">
+                <span class="section-label">Sobre nosotros</span>
+                <h2 class="section-title">Centro de Reumatología más completo y prestigioso de la provincia</h2>
+            </div>
+            
+            <div class="about-split">
+                <div class="about-visual">
+                    <div class="about-img-frame">
+                        <img src="img/Screenshot_from_2026-02-20_12-00-37-removebg-preview.png" alt="C.I.R. Reumatología">
+                    </div>
+                </div>
+                <div class="about-details">
+                    <p>El Centro Integral de Reumatología cuenta con <strong>35 años de trayectoria</strong> en San Miguel de Tucumán, con reconocido prestigio en la región.</p>
+                    <p>Brindamos un abordaje interdisciplinario del paciente reumático, con un equipo médico especializado orientado a lograr los mejores resultados terapéuticos.</p>
+                    <p>Nuestro staff de reumatólogos está integrado por profesionales certificados, miembros de la <strong>Sociedad de Reumatología Tucumana</strong> y de la <a href="https://www.reumatologia.org.ar/" target="_blank" style="color: var(--primary); font-weight: 600; text-decoration: none;">Sociedad Argentina de Reumatología (SAR)</a>.</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa fa-user-md"></i>
+                    <h6>Doctores</h6>
+                    <small>Cualificados</small>
+                </div>
+                <div class="stat-card">
+                    <i class="fa fa-procedures"></i>
+                    <h6>Atención</h6>
+                    <small>Alta calidad</small>
+                </div>
+                <div class="stat-card">
+                    <i class="fa fa-microscope"></i>
+                    <h6>Estudios</h6>
+                    <small>Certeros</small>
+                </div>
+                <div class="stat-card">
+                    <i class="fa fa-flask"></i>
+                    <h6>Investigación</h6>
+                    <small>Laboratorios</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Servicios</span>
+                <h2 class="section-title">Servicios médicos</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-user-md"></i></div>
+                    <h3>Consultas Médicas</h3>
+                    <p>Elija al especialista que necesita entre nuestro equipo de profesionales. Reserve su turno con el médico que mejor se adapte a sus necesidades de salud.</p>
+                    <a href="contact.html" class="btn-contact">Contáctenos <span>→</span></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-bone"></i></div>
+                    <h3>Densitometría Ósea</h3>
+                    <p>Atendemos de lunes a viernes, de 08:00 a 19:00 hs. El servicio es rápido, completo y seguro. Informes al instante.</p>
+                    <a href="contact.html" class="btn-contact">Contáctenos <span>→</span></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-image"></i></div>
+                    <h3>Ecografía partes blandas</h3>
+                    <p>Diagnóstico por imágenes de tejidos blandos, músculos y articulaciones. Tecnología de ultrasonido para evaluar lesiones y condiciones inflamatorias.</p>
+                    <a href="contact.html" class="btn-contact">Contáctenos <span>→</span></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa fa-search"></i></div>
+                    <h3>Capilaroscopia</h3>
+                    <p>Estudio especializado para evaluar la microcirculación en capilares. Diagnóstico preciso de enfermedades reumatológicas y vasculares.</p>
+                    <a href="contact.html" class="btn-contact">Contáctenos <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nuestro equipo</span>
+                <h2 class="section-title">Profesionales Cualificados</h2>
+            </div>
+            
+            <div class="team-carousel-wrap">
+                <button class="team-arrow team-arrow-left" onclick="moveCarousel(-1)">
+                    <i class="fa fa-chevron-left"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="#" class="nav-item nav-link active">Inicio</a>
-                        <a href="#about" class="nav-item nav-link">Sobre nosotros</a>
-                        <a href="#services" class="nav-item nav-link">Servicios</a>
-                        <a href="#team" class="nav-item nav-link">El equipo</a>
-                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-        <div class="container py-5">
-            <div class="row justify-content-start">
-                <div class="col-lg-8 text-center text-lg-start">
-                    <h1 class="display-1 text-white mb-md-4">Bienvenido a Centro Integral de Reumatología S.R.L</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="about" class="container-fluid py-5">
-        <div class="container">
-            <div class="row gx-5">
-                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg"
-                            style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="mb-4">
-                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Sobre nosotros
-                        </h5>
-                        <h1 class="display-4">El mejor centro reumatológico</h1>
-                    </div>
-                    <p>El Centro Integral de Reumatología cuenta con 35 años de trayectoria en San Miguel de Tucumán,
-                        con reconocido prestigio en la región.
-                        <br><br>
-                        Brindamos un abordaje interdisciplinario del paciente reumático, con un equipo médico
-                        especializado orientado a lograr los mejores resultados terapéuticos.
-                        <br><br>
-                        Nuestro staff de reumatólogos está integrado por profesionales certificados, miembros de la
-                        Sociedad de Reumatología Tucumana y de la Sociedad Argentina de Reumatología (SAR). Contamos
-                        además con un equipo interdisciplinario de distintas especialidades para una atención integral
-                        del paciente reumático.
-                    </p>
-                    <div class="row g-3 pt-3">
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-user-md text-primary mb-3"></i>
-                                <h6 class="mb-0">Doctores<small class="d-block text-primary">Cualificados</small></h6>
-                            </div>
+                
+                <div class="team-carousel-track" id="teamCarousel">
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <img src="img/team-1.jpg" alt="Dr. Nombre Apellido">
                         </div>
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-procedures text-primary mb-3"></i>
-                                <h6 class="mb-0">Atención<small class="d-block text-primary">Alta calidad</small></h6>
-                            </div>
+                        <div class="team-info">
+                            <h3>Dr. Nombre Apellido</h3>
+                            <span class="team-role">Reumatología</span>
+                            <p class="team-desc">Especialista con amplia trayectoria en el diagnóstico y tratamiento de enfermedades reumáticas.</p>
                         </div>
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-microscope text-primary mb-3"></i>
-                                <h6 class="mb-0">Estudios<small class="d-block text-primary">Certeros</small></h6>
-                            </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <img src="img/team-2.jpg" alt="Dra. Nombre Apellido">
                         </div>
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-flask text-primary mb-3"></i>
-                                <h6 class="mb-0">Investigación<small class="d-block text-primary">Laboratorios</small>
-                                </h6>
-                            </div>
+                        <div class="team-info">
+                            <h3>Dra. Nombre Apellido</h3>
+                            <span class="team-role">Reumatología Infantil</span>
+                            <p class="team-desc">Atención especializada y humana para el cuidado de la salud de los más jóvenes.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <img src="img/team-3.jpg" alt="Dr. Nombre Apellido">
+                        </div>
+                        <div class="team-info">
+                            <h3>Dr. Nombre Apellido</h3>
+                            <span class="team-role">Clínica Médica</span>
+                            <p class="team-desc">Enfoque integral en la salud del paciente y seguimiento clínico personalizado.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <img src="img/team-1.jpg" alt="Dr. Ejemplo Cuatro">
+                        </div>
+                        <div class="team-info">
+                            <h3>Dr. Ejemplo Cuatro</h3>
+                            <span class="team-role">Reumatología</span>
+                            <p class="team-desc">Profesional dedicado al cuidado integral del paciente con enfermedades autoinmunes.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <img src="img/team-2.jpg" alt="Dra. Ejemplo Cinco">
+                        </div>
+                        <div class="team-info">
+                            <h3>Dra. Ejemplo Cinco</h3>
+                            <span class="team-role">Reumatología</span>
+                            <p class="team-desc">Especialista en enfermedades autoinmunes y tratamientos avanzados.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div id="services" class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Servicios</h5>
-                <h1 class="display-4">Servicios médicos</h1>
-            </div>
-            <div class="row g-5 justify-content-center">
-                <div class="col-lg-6 col-md-6">
-                    <div
-                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon mb-4">
-                            <i class="fa fa-2x fa-user-md text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Consultas Médicas</h4>
-                        <p class="m-0">Elija al especialista que necesita entre nuestro equipo de profesionales. Reserve
-                            su turno con el médico que mejor se adapte a sus necesidades de salud.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div
-                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon mb-4">
-                            <i class="fa fa-2x fa-bone text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Densitometría Ósea</h4>
-                        <p class="m-0">Atendemos de lunes a viernes, de 08:00 a 19:00 hs. El servicio es rápido,
-                            completo y seguro. Puede asistir con o sin turno previo y los informes se entregan al
-                            instante.</p>
-                        <small class="text-muted fst-italic mt-2">Cuidar sus huesos hoy es prevenir fracturas
-                            mañana...</small>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div
-                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon mb-4">
-                            <i class="fa fa-2x fa-image text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Ecografía partes blandas</h4>
-                        <p class="m-0">Diagnóstico por imágenes de tejidos blandos, músculos y articulaciones.
-                            Tecnología de ultrasonido para evaluar lesiones y condiciones inflamatorias.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div
-                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon mb-4">
-                            <i class="fa fa-2x fa-search text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Capilaroscopia</h4>
-                        <p class="m-0">Estudio especializado para evaluar la microcirculación en capilares. Diagnóstico
-                            preciso de enfermedades reumatológicas y vasculares mediante observación directa.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="contact.html">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="team" class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 450px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Nuestros médicos</h5>
-                <h1 class="display-4">Profesionales cualificados</h1>
-            </div>
-            <div class="owl-carousel team-carousel position-relative">
-                <div class="team-item">
-                    <div class="row g-0 bg-light rounded overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="img/team-1.jpg" style="object-fit: cover;">
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                            <div class="mt-auto p-4">
-                                <h3>Dr. Nombre Apellido</h3>
-                                <h6 class="fw-normal fst-italic text-primary mb-4">Reumatología</h6>
-                                <p class="m-0">Especialista con amplia trayectoria en el diagnóstico y tratamiento de
-                                    enfermedades reumáticas.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <div class="row g-0 bg-light rounded overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="img/team-2.jpg" style="object-fit: cover;">
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                            <div class="mt-auto p-4">
-                                <h3>Dra. Nombre Apellido</h3>
-                                <h6 class="fw-normal fst-italic text-primary mb-4">Reumatología Infantil</h6>
-                                <p class="m-0">Atención especializada y humana para el cuidado de la salud de los más
-                                    jóvenes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <div class="row g-0 bg-light rounded overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="img/team-3.jpg" style="object-fit: cover;">
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                            <div class="mt-auto p-4">
-                                <h3>Dr. Nombre Apellido</h3>
-                                <h6 class="fw-normal fst-italic text-primary mb-4">Clínica Médica</h6>
-                                <p class="m-0">Enfoque integral en la salud del paciente y seguimiento clínico
-                                    personalizado.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div id="obras-sociales" class="container-fluid py-5">
+                <button class="team-arrow team-arrow-right" onclick="moveCarousel(1)">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="obras-sociales" class="section obras-section">
         <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Obras Sociales</h5>
-                <h1 class="display-4">Recibimos</h1>
+            <div class="section-header">
+                <span class="section-label">Obras Sociales</span>
+                <h2 class="section-title">Recibimos</h2>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="bg-light rounded p-4 p-lg-5 text-center">
-                        <img class="img-fluid" src="img/obras-sociales.png"
-                            alt="Obras Sociales - Subsidio de Salud, PAMI, Ricardo C. Mora, Boreal, Swiss Medical, OSDOP, OSPRERA">
-                    </div>
-                </div>
+            <div class="obras-box">
+                <img src="img/obras-sociales.png" alt="Obras Sociales">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container-fluid bg-dark text-light mt-5 py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6 col-md-9">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                        Contactanos</h4>
-                    <p class="mb-4">Nos puedes encontrar en:</p>
-                    <p class="mb-2">
-                        <i class="fa fa-map-marker-alt text-primary me-3"></i>
-                        <a href="https://www.google.com/maps/search/Santiago+del+Estero+118,+San+Miguel+de+Tucuman"
-                            target="_blank" class="text-light">118 Santiago del Estero 5to piso, Tucumán</a>
-                    </p>
-                    <p class="mb-2">
-                        <i class="fa fa-envelope text-primary me-3"></i>
-                        <a href="mailto:reumatologiacir@gmail.com" class="text-light">reumatologiacir@gmail.com</a>
-                    </p>
-                    <p class="mb-2">
-                        <i class="fa fa-phone-alt text-primary me-3"></i>
-                        <a href="tel:+5493812543377" class="text-light">+54 9 381 254 3377</a>
-                    </p>
-                    <p class="mb-0">
-                        <i class="fab fa-whatsapp text-primary me-3"></i>
-                        <a href="https://wa.me/5493812072312" target="_blank" class="text-light">+54 9 381 2072312</a>
-                    </p>
-                </div>
-                <div class="col-lg-6 col-md-9">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                        Enlaces rapidos</h4>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Inicio</a>
-                        <a class="text-light mb-2" href="#about"><i class="fa fa-angle-right me-2"></i>Sobre
-                            nosotros</a>
-                        <a class="text-light mb-2" href="#services"><i class="fa fa-angle-right me-2"></i>Servicios</a>
-                        <a class="text-light mb-2" href="#team"><i class="fa fa-angle-right me-2"></i>Nuestro equipo</a>
-                        <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contacto</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+    <footer class="footer">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">© <a class="text-primary" href="#">C.I.R SRL</a>. Todos los derechos reservados.
-                    </p>
+            <div class="footer-grid">
+                <div>
+                    <h4>Contáctanos</h4>
+                    <a href="https://www.google.com/maps/search/Santiago+del+Estero+118,+San+Miguel+de+Tucuman" target="_blank">
+                        <i class="fa fa-map-marker-alt"></i> Santiago del Estero 118, 5to piso, Tucumán
+                    </a>
+                    <a href="mailto:reumatologiacir@gmail.com">
+                        <i class="fa fa-envelope"></i> reumatologiacir@gmail.com
+                    </a>
+                    <a href="tel:+5493812543377">
+                        <i class="fa fa-phone-alt"></i> +54 9 381 254 3377
+                    </a>
+                    <a href="https://wa.me/5493812072312" target="_blank">
+                        <i class="fab fa-whatsapp"></i> +54 9 381 207 2312
+                    </a>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>
+                <div>
+                    <h4>Enlaces</h4>
+                    <a href="index.html"><i class="fa fa-angle-right"></i> Inicio</a>
+                    <a href="#about"><i class="fa fa-angle-right"></i> Sobre nosotros</a>
+                    <a href="#services"><i class="fa fa-angle-right"></i> Servicios</a>
+                    <a href="#team"><i class="fa fa-angle-right"></i> Nuestro equipo</a>
+                    <a href="contact.html"><i class="fa fa-angle-right"></i> Contacto</a>
                 </div>
             </div>
+            <div class="footer-bottom">
+                <p>© C.I.R SRL. Todos los derechos reservados.</p>
+                <p>Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
+            </div>
         </div>
-    </div>
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </footer>
 
+    <a href="#" class="back-top"><i class="bi bi-arrow-up"></i></a>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-
     <script>
-        (function () {
-            const sections = document.querySelectorAll('[id]');
-            const navLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
+        // Custom carousel - shows 3 items, moves 1 per click
+        let currentIndex = 0;
+        const cardWidth = document.querySelector('.team-card').offsetWidth + 24;
+        const totalCards = document.querySelectorAll('.team-card').length;
+        const visibleCards = window.innerWidth > 992 ? 3 : (window.innerWidth > 576 ? 2 : 1);
+        const maxIndex = totalCards - visibleCards;
 
-            function setActiveLink(id) {
-                navLinks.forEach(function (link) {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + id || (id === '' && link.getAttribute('href') === '#')) {
-                        link.classList.add('active');
-                    }
-                });
+        function moveCarousel(direction) {
+            const track = document.getElementById('teamCarousel');
+            currentIndex += direction;
+            
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            
+            const scrollAmount = currentIndex * cardWidth;
+            track.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        // Back to top
+        const backTop = document.querySelector('.back-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backTop.classList.add('visible');
+            } else {
+                backTop.classList.remove('visible');
             }
+        });
 
-            var currentSection = '';
-
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        currentSection = entry.target.id;
-                        setActiveLink(currentSection);
-                    }
-                });
-            }, {
-                rootMargin: '-100px 0px -60% 0px',
-                threshold: 0
-            });
-
-            sections.forEach(function (section) {
-                observer.observe(section);
-            });
-
-            window.addEventListener('scroll', function () {
-                if (window.scrollY < 200) {
-                    setActiveLink('');
+        // Active nav on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
                 }
             });
-        })();
+        }, { rootMargin: '-30% 0px -60% 0px' });
+
+        sections.forEach(section => observer.observe(section));
     </script>
 </body>
 

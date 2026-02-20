@@ -16,10 +16,7 @@ El objetivo del sitio es ser:
 El proyecto consta de los siguientes archivos principales:
 
 - **index.html**: Página principal (Home). Contiene la información clave.
-- **service.html**: Detalle de las prestaciones médicas.
-- **team.html**: Staff médico.
 - **contact.html**: Información de ubicación y contacto (Mapas y Teléfonos).
-- **testimonial.html**: Referencias de pacientes.
 
 ## ⚙️ Cómo editar
 Al ser un sitio estático, no requiere compilación ni instalación de dependencias (npm/node).
